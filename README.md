@@ -4,6 +4,15 @@ Images -
 
 <ul>
 <li>
-    <b>JIRA Timesheet plugin</b><br/><img src="http://pbs.twimg.com/media/B0pqKyCIMAA6Rj-.png:large" />
+    <b>JIRA Timesheet plugin</b>
+    <br/>
+    <br/>
+    <img src="http://pbs.twimg.com/media/B0pqKyCIMAA6Rj-.png:large" />
+</li>
+<li>
+    <b>Piston grid (page layout) designer</b>
+    <br/>
+    <br/>
+    <img src="http://pbs.twimg.com/media/B0sGkUVCUAEHBHo.png" />
 </li>
 </ul>

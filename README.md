@@ -2,26 +2,22 @@ Piston is a Java EE 7 based lean pure servlet (no embedded container) portal fra
 
 Images -
 
-<ul>
-<li>
+<p>
     <b>JIRA Timesheet plugin</b>
-    <br/>
-    <br/>
+<p>
+
+<p>    
     <img src="http://pbs.twimg.com/media/B0pqKyCIMAA6Rj-.png:large" />
-</li>
-<li>
-    <br/>
+</p>
+<p>
     <b>Piston grid (page layout) designer</b>
-    <br/>
-    <br/>
+</p>
+<p>
     <img src="http://pbs.twimg.com/media/B0sGkUVCUAEHBHo.png" />
-</li>
-</ul>
-<li>
-    <br/>
+</<p>>
+<p>
     <b>A complex grid which can be created from browser without any coding</b>
-    <br/>
-    <br/>
+</p>
+<p>
     <img src="http://pbs.twimg.com/media/B0sGkQKCAAA1jhD.png" />
-</li>
-</ul>
+</p>

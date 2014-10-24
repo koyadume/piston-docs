@@ -14,9 +14,9 @@ Images -
 </p>
 <p>
     <img src="http://pbs.twimg.com/media/B0sGkUVCUAEHBHo.png" />
-</<p>>
+</<p>
 <p>
-    <b>A complex grid which can be created from browser without any coding</b>
+    <b>A complex grid (page layout) which can be created from browser without any coding</b>
 </p>
 <p>
     <img src="http://pbs.twimg.com/media/B0sGkQKCAAA1jhD.png" />

@@ -3,7 +3,7 @@ Piston is a Java EE 7 based lean pure servlet (no embedded container) portal fra
 Images -
 
 <p>
-    <b>JIRA Timesheet plugin</b>
+    <b>Timesheet plugin for JIRA</b>
 <p>
 
 <p>    

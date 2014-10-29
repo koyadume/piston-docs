@@ -1,4 +1,8 @@
-Piston is a Java EE 7 based lean and pure servlet (no embedded container) portal framework. Please visit wiki for detailed documentation.
+Piston is a Java EE 7 based lean and pure servlet (no embedded container) portal framework. 
+
+Follow [@pistonportal on Twitter](http://twitter.com/PistonPortal) for updates on releases and other announcements.
+
+Please visit wiki for detailed documentation.
 
 Images -
 

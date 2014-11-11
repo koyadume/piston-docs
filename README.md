@@ -7,13 +7,19 @@ Follow [@pistonportal on Twitter](http://twitter.com/PistonPortal) for updates o
 Please visit wiki for detailed documentation.
 
 Images -
-
 <p>
     <b>Timesheet plugin for JIRA</b>
 <p>
 
 <p>    
-    <img src="http://pistonportal.files.wordpress.com/2014/10/timesheet.png?w=595" />
+    <img src="https://github.com/koyadume/piston-master/wiki/images/timesheet.png" />
+</p>
+<p>
+    <b>My Issues plugin for JIRA</b>
+<p>
+
+<p>    
+    <img src="https://github.com/koyadume/piston-master/wiki/images/my-issues.png" />
 </p>
 <p>
     <b>Piston grid (page layout) designer</b>

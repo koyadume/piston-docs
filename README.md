@@ -8,6 +8,13 @@ Please visit wiki for detailed documentation.
 
 Images -
 <p>
+    <b>Visualize a single node docker cloud with Piston</b>
+<p>
+
+<p>    
+    <img src="https://github.com/koyadume/piston-master/wiki/images/piston-docker-cloud.png" />
+</p>
+<p>
     <b>Timesheet plugin for JIRA</b>
 <p>
 

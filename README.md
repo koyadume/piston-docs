@@ -1,6 +1,6 @@
 Piston is a Java EE 7 based lean and pure servlet (no embedded container) portal framework. 
 
-Follow ![@pistonportal on Twitter](http://twitter.com/PistonPortal) for updates on releases and other announcements.
+Follow <a href="http://twitter.com/PistonPortal">@pistonportal on Twitter</a> for updates on releases and other announcements.
 
 <b>Master branch contains only license and readme files. Actual code is available in 1.0 branch.</b>
 
@@ -12,7 +12,7 @@ Images -
 <p>
 
 <p>
-    <b>![Screencast: Visualizing and creating docker images using piston](http://t.co/Wm1EgzOHiD)</b>
+    <a href="http://t.co/Wm1EgzOHiD">Screencast: Visualizing and creating docker images using piston</a>
 <p>
 
 <p>    

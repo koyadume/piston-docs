@@ -11,13 +11,15 @@ Images -
     <b>Visualize a single node docker cloud with Piston</b>
 <p>
 
-<p>    
-    <img src="https://github.com/koyadume/piston-master/wiki/images/piston-docker-cloud.png" />
-</p>
+<p>
+    <b>[Screencast: Visualizing and creating docker images using piston](http://t.co/Wm1EgzOHiD)</b>
+<p>
 
-<p>
-    [Screencast: Visualizing and creating docker images using piston](http://t.co/Wm1EgzOHiD)
-<p>
+<p>    
+    <a href="http://t.co/Wm1EgzOHiD">
+        <img src="https://github.com/koyadume/piston-master/wiki/images/piston-docker-cloud.png" />
+    </a>
+</p>
 
 <p>
     <b>Timesheet plugin for JIRA</b>

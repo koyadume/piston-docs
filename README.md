@@ -8,6 +8,8 @@ Follow <a href="http://twitter.com/PistonPortal" target="_blank">@pistonportal o
 
 Please visit wiki for detailed documentation.
 
+<hr/>
+
 Images -
 <p>
     <b>Visualize a single node docker cloud with Piston</b>

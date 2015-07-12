@@ -1,4 +1,4 @@
-Piston is a Java based lean and pure servlet (no embedded container) portal framework. 
+Piston is a Java based container-less micro portal framework. 
 
 <img src="https://raw.githubusercontent.com/wiki/koyadume/piston-master/images/portlet-vs-piston.png" />
 

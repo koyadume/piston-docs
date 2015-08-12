@@ -1,0 +1,1 @@
+A frame represents common area across all the pages of a site. This is also used to control look and feel of the site.

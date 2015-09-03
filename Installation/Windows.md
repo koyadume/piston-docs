@@ -1,7 +1,7 @@
 ## Setup piston
 Follow instructions mentioned at below link -
 ```
-https://github.com/koyadume/piston-setup/tree/2.0
+https://github.com/koyadume/piston-setup/tree/2.x
 ```
 
 ## Access portal

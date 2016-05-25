@@ -87,7 +87,7 @@ GRANT ALL PRIVILEGES ON userMgmt.* TO 'piston'@'%';
 
 FLUSH PRIVILEGES;
 ```
-* Go to ```piston-deploy-workspace\properties``` folder and adjust value of ```mariadb-port``` property in ```mariadb.properties``` file according to your environment. Value of ```mariadb-password``` must be ```piston``` user password.
+* Go to ```piston-deploy-workspace\properties``` folder and adjust value of ```mariadb-port``` property in ```mariadb.properties``` file according to your environment.
 
 
 ## Clone git repositories

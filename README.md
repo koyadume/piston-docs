@@ -1,3 +1,1 @@
-This branch contains documentation for 2.0 branch of [piston-core](https://github.com/koyadume/piston-core).
-
-# Work in Progress
+This branch contains documentation for 2.x branch of [piston-core](https://github.com/pistonportal/piston-core).

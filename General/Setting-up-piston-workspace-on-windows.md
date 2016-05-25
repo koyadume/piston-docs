@@ -72,8 +72,22 @@ git clone https://bitbucket.org/pistonPortal/piston-deploy-workspace.git
 * Create an entry into windows ```C:\Windows\System32\drivers\etc\hosts``` file as following -
 ```
 <mariadb_server_ip_address> piston-db
-```	
-* Go to ```piston-deploy-workspace\properties``` folder and adjust values of ```mariadb-port``` and ```mariadb-password``` properties in ```mariadb.properties``` file according to your environment. Value of ```mariadb-password``` must be root user password.
+```
+* Create a user called ```piston``` and grant it access to following databases -
+	* piston
+    * steam
+    * userMgmt
+```
+CREATE USER 'piston'@'%' IDENTIFIED BY 'piston';
+
+SET @@SQL_MODE = CONCAT(@@SQL_MODE, ',NO_AUTO_CREATE_USER');
+GRANT ALL PRIVILEGES ON piston.* TO 'piston'@'%';
+GRANT ALL PRIVILEGES ON steam.* TO 'piston'@'%';
+GRANT ALL PRIVILEGES ON userMgmt.* TO 'piston'@'%';
+
+FLUSH PRIVILEGES;
+```
+* Go to ```piston-deploy-workspace\properties``` folder and adjust value of ```mariadb-port``` property in ```mariadb.properties``` file according to your environment. Value of ```mariadb-password``` must be ```piston``` user password.
 
 
 ## Clone git repositories

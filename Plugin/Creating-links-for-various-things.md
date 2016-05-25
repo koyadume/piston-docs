@@ -7,14 +7,14 @@
 
 ## Render link as button
 ```xml
-<pButton class="btn pseudo-search"> 
+<pButton class="pt-btn pseudo-search"> 
 	<c:out value="Search" />
 </pButton>
 ```
 
 ## Render link as button (Font Awesome support)
 ```xml
-<pButton class="btn pseudo-search" faClass="fa fa-search fa-lg" faStyle="font-size: 1.2em; padding-right: 6px;"> 
+<pButton class="pt-btn pseudo-search" faClass="fa fa-search fa-lg" faStyle="font-size: 1.2rem; padding-right: 6px;"> 
 	<c:out value="Search" />
 </pButton>
 ```
@@ -50,3 +50,4 @@ $(function() {
     });
 });
 ```
+

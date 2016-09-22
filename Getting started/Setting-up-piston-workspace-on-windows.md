@@ -92,14 +92,14 @@ FLUSH PRIVILEGES;
 
 ## Clone git repositories
 ```
+cd git-repos\piston
+git clone -b 2.x https://github.com/pistonportal/piston-core.git
+
 cd git-repos\piston\piston-apps
 git clone -b 1.x https://github.com/pistonportal/admin-appsMgmt.git
 git clone -b 1.x https://github.com/pistonportal/admin-siteExplorer.git
 git clone -b 1.x https://github.com/pistonportal/admin-steam.git
-git clone -b 1.x https://github.com/pistonportal/admin-userMgmt.git
-
-cd git-repos\piston
-git clone -b 2.x https://github.com/pistonportal/piston-core.git
+git clone -b 1.x https://github.com/pistonportal/custom-userMgmt.git
 ```
 
 ## Deploy code on local tomcat server
@@ -136,4 +136,11 @@ gradle cleanEclipse eclipse
 
 * Go to ```git``` perspective in eclipse and import all git repositories under ```git-repos\piston``` folder.
 
+* Lombok setup
+	- Download latest version of lombak.
+	- Execute following command from the folder where lombok was downloaded -
+```
+java -jar lombok-x.y.z.jar
+```
+	- Select ```eclipse.exe``` file for your local eclipse installation to configure eclipse with lombok.
  

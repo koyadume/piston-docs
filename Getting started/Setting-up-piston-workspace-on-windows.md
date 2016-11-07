@@ -4,13 +4,16 @@ Create a folder ```git-repos``` at a location of your choice with following stru
 git-repos
 	devops
     piston
-        piston-apps
+        apps
+    piston-ext
+    	apps
+    	frames
 ```
 
 ## Clone piston-deploy-workspace repository
 ```
 cd git-repos\devops
-git clone https://bitbucket.org/pistonPortal/piston-deploy-workspace.git
+git clone https://github.com/pistonPortal/piston-deploy-workspace.git
 ```
 
 ## Install various runtimes/tools required by Piston
@@ -95,10 +98,12 @@ FLUSH PRIVILEGES;
 cd git-repos\piston
 git clone -b 2.x https://github.com/pistonportal/piston-core.git
 
-cd git-repos\piston\piston-apps
+cd git-repos\piston\apps
 git clone -b 1.x https://github.com/pistonportal/admin-appsMgmt.git
 git clone -b 1.x https://github.com/pistonportal/admin-siteExplorer.git
 git clone -b 1.x https://github.com/pistonportal/admin-steam.git
+
+cd git-repos\piston-ext\apps
 git clone -b 1.x https://github.com/pistonportal/custom-userMgmt.git
 ```
 

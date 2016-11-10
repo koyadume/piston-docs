@@ -1,5 +1,5 @@
 ## Create folder structure
-Create a folder ```git-repos``` at a location of your choice with following structure -
+Create a folder `git-repos` at a location of your choice with following structure -
 ```
 git-repos
 	devops
@@ -18,26 +18,24 @@ git clone https://github.com/pistonPortal/piston-deploy-workspace.git
 
 ## Install various runtimes/tools required by Piston
 ### Java
-* Install latest version of ```Oracle JDK 8``` from internet.
-* Define an environment variable ```JAVA_HOME```. Value of this variable should be JDK installation root directory.
-* Append ```%JAVA_HOME%\bin``` to ```Path``` environment variable.
+* Install latest version of `Oracle JDK 8` from internet.
+* Adjust value of `JAVA_HOME` environment variable in `piston-deploy-workspace\scripts\setenv.bat` file and point it to JDK installation root directory.
 
 ### Ant
-* Install latest version of ```Ant```.
-* Create a folder ```ext``` under ant installation directory.
-* Copy ```https://bitbucket.org/bbshailendra/piston-ant/downloads/piston-ant-1.0.2.jar``` to newly created folder.
-* Define an environment variable ```ANT_HOME```. Value of this variable should be ant installation root directory.
-* Append ```%ANT_HOME%\bin``` to ```Path``` environment variable.
+* Install latest version of `Ant`.
+* Adjust value of `ANT_HOME` environment variable in `piston-deploy-workspace\scripts\setenv.bat` file and point it to Ant installation root directory.
+* Create a folder `ext` under ant installation directory.
+* Copy `https://bitbucket.org/bbshailendra/piston-ant/downloads/piston-ant-1.0.2.jar` to newly created folder.
 
 ### Gradle 
 * Install latest version of Gradle.
-* Define an environment variable ```GRADLE_HOME```. Value of this variable should be gradle installation root directory.
-* Append ```%GRADLE_HOME%\bin``` to ```Path``` environment variable.
+* Adjust value of `GRADLE_HOME` environment variable in `piston-deploy-workspace\scripts\setenv.bat` file and point it to Gradle installation root directory.
 
 ### Tomcat
-* Install latest version of ```Tomcat```.
-* Download ```mariadb-java-client-1.2.0.jar``` from internet and copy it to ```<tomcat_installation_directory>\lib``` folder.
-* Edit ```<tomcat_installation_directory>\conf\server.xml``` file and make sure that content of ```<GlobalNamingResources>``` and ```<Realm>``` tags are as following -
+* Install latest version of `Tomcat`.
+* Adjust value of `CATALINA_BASE` environment variable in `piston-deploy-workspace\scripts\setenv.bat` file and point it to Tomcat installation root directory.
+* Download `mariadb-java-client-1.5.2.jar` from internet and copy it to `<tomcat_installation_directory>\lib` folder.
+* Edit `<tomcat_installation_directory>\conf\server.xml` file and make sure that content of `<GlobalNamingResources>` and `<Realm>` tags are as following -
 ```xml
 <GlobalNamingResources>
     <!-- Editable user database that can also be used by
@@ -69,28 +67,14 @@ git clone https://github.com/pistonPortal/piston-deploy-workspace.git
 ```
 
 ### MariaDB
-* Install latest version of ```MariaDB 10.1.x```.
-* Define an environment variable ```MARIADB_HOME```. Value of this variable should be mariadb installation root directory.
-* Append ```%MARIADB%\bin``` to ```Path``` environment variable.
-* Create an entry into windows ```C:\Windows\System32\drivers\etc\hosts``` file as following -
+* Install latest version of `MariaDB 10.1.x`.
+* Define an environment variable `MARIADB_HOME`. Value of this variable should be mariadb installation root directory.
+* Append `%MARIADB%\bin` to `Path` environment variable.
+* Create an entry into windows `C:\Windows\System32\drivers\etc\hosts` file as following -
 ```
 <mariadb_server_ip_address> piston-db
 ```
-* Create a user called ```piston``` and grant it access to following databases -
-	* piston
-    * steam
-    * userMgmt
-```
-CREATE USER 'piston'@'%' IDENTIFIED BY 'piston';
-
-SET @@SQL_MODE = CONCAT(@@SQL_MODE, ',NO_AUTO_CREATE_USER');
-GRANT ALL PRIVILEGES ON piston.* TO 'piston'@'%';
-GRANT ALL PRIVILEGES ON steam.* TO 'piston'@'%';
-GRANT ALL PRIVILEGES ON userMgmt.* TO 'piston'@'%';
-
-FLUSH PRIVILEGES;
-```
-* Go to ```piston-deploy-workspace\properties``` folder and adjust value of ```mariadb-port``` property in ```mariadb.properties``` file according to your environment.
+* Go to `piston-deploy-workspace\properties` folder and adjust value of `mariadb-port` and `mariadb-pwd` properties in `mariadb.properties` file according to your environment.
 
 
 ## Clone git repositories
@@ -107,11 +91,15 @@ cd git-repos\piston-ext\apps
 git clone -b 1.x https://github.com/pistonportal/custom-userMgmt.git
 ```
 
-## Deploy code on local tomcat server
+## Deploy code on local tomcat server as well as create various DBs and tables **(Make sure MariaDB is running)** - 
 ```
 cd git-repos\devops\piston-deploy-workspace\scripts
 setupPistonFromLocalWorkspace.bat
 ```
+**Note - Use following command in order to deploy piston and apps code without creating DBs and tables**
+```
+setupPistonFromLocalWorkspace.bat skipDBs
+``` 
 
 ## Testing
 Assuming tomcat is listening on 8080 port, enter following url in browser to initialize Piston -
@@ -119,33 +107,32 @@ Assuming tomcat is listening on 8080 port, enter following url in browser to ini
 http://localhost:8080/piston/web/scanAndRegisterApps
 ```
 
-Use following url to access ```admin``` site -
+Use following url to access `admin` site -
 ```
 http://localhost:8080/piston/portal/site-admin/appAdmin
 ```
 
-Enter ```portalAdmin``` for both username and password on login screen to proceed.
+Enter `portalAdmin` for both username and password on login screen to proceed.
 
 
 ## Eclipse setup
-* Go to ```git-repos\piston\piston-core``` folder and execute following commands -
+* Go to `git-repos\piston\piston-core` folder and execute following commands -
 ```
 gradle cleanEclipse eclipse
 gradle clean install
 ```
  
-* Go to ```git-repos\piston\piston-apps``` folder and execute following command from every folder under this folder -
+* Go to `git-repos\piston\piston-apps` folder and execute following command from every folder under this folder -
 ```
 gradle cleanEclipse eclipse
 ```
 
-* Go to ```git``` perspective in eclipse and import all git repositories under ```git-repos\piston``` folder.
-
+* Go to `git` perspective in eclipse and import all git repositories under `git-repos\piston` folder.
 * Lombok setup
 	- Download latest version of lombak.
 	- Execute following command from the folder where lombok was downloaded -
 ```
 java -jar lombok-x.y.z.jar
 ```
-	- Select ```eclipse.exe``` file for your local eclipse installation to configure eclipse with lombok.
+	- Select `eclipse.exe` file for your local eclipse installation to configure eclipse with lombok.
  
